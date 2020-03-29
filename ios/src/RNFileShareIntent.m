@@ -8,7 +8,7 @@
 
 #import "RNFileShareIntent.h"
 #import "RCTRootView.h"
-#import "MobileCoreServices/MobileCoreServices.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "RCTLog.h"
 @implementation RNFileShareIntent
 static NSItemProvider* ShareFileIntentModule_itemProvider;
