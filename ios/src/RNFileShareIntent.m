@@ -21,9 +21,7 @@ static NSExtensionContext* extContext;
 
 RCT_EXPORT_MODULE();
 
-RCT_REMAP_METHOD(getFilePath,
-                 getFilePathResolve:(RCTPromiseResolveBlock)resolve
-                 rejecter:(RCTPromiseRejectBlock)reject)
+RCT_EXPORT_METHOD(getFilePath:(RCTResponseSenderBlock)callback)
 {
     NSItemProvider *itemProvider = ShareFileIntentModule_itemProvider;
     NSExtensionItem *inputItem = extContext.inputItems.firstObject;
@@ -45,90 +43,90 @@ RCT_REMAP_METHOD(getFilePath,
     
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeURL]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeURL options:nil completionHandler:^(NSURL *url, NSError *error) {
-            resolve(@[url.absoluteString]);
+            callback(@[url.absoluteString]);
         }];
     }
     
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeFileURL]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeFileURL options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypePDF]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypePDF options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeBMP]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeBMP options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeGIF]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeGIF options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeICO]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeICO options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeMP3]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeMP3 options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypePNG]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypePNG options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeJPEG]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeJPEG options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeMPEG]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeMPEG options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeImage]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeImage options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeText]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeText options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeAudio]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeAudio options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeVideo]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeVideo options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeInkText]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeInkText options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:@"public.url"]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:@"public.url" options:nil completionHandler:^(NSURL *url, NSError *error) {
-            resolve(@[url.absoluteString]);
+            callback(@[url.absoluteString]);
         }];
     }
     if ([ShareFileIntentModule_itemProvider hasItemConformingToTypeIdentifier:@"public.plain-text"]) {
         [ShareFileIntentModule_itemProvider loadItemForTypeIdentifier:@"public.plain-text" options:nil completionHandler:^(NSString *url, NSError *error) {
-            resolve(@[url]);
+            callback(@[url]);
         }];
     }
 }
