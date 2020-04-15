@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		156D45F3230C1CEF00DA668D /* FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 156D45F2230C1CEE00DA668D /* FileHelper.m */; };
+		15D2BEC8230B200B00251486 /* Operation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2BEC4230B200B00251486 /* Operation.m */; };
+		15D2BEC9230B200B00251486 /* OperationRetrieval.m in Sources */ = {isa = PBXBuildFile; fileRef = 15D2BEC7230B200B00251486 /* OperationRetrieval.m */; };
 		B3E7B58A1CC2AC0600A0062D /* RNFileShareIntent.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNFileShareIntent.m */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +27,12 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNFileShareIntent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFileShareIntent.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		156D45F1230C1CDF00DA668D /* FileHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileHelper.h; sourceTree = "<group>"; };
+		156D45F2230C1CEE00DA668D /* FileHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileHelper.m; sourceTree = "<group>"; };
+		15D2BEC4230B200B00251486 /* Operation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Operation.m; sourceTree = "<group>"; };
+		15D2BEC5230B200B00251486 /* OperationRetrieval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperationRetrieval.h; sourceTree = "<group>"; };
+		15D2BEC6230B200B00251486 /* Operation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Operation.h; sourceTree = "<group>"; };
+		15D2BEC7230B200B00251486 /* OperationRetrieval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperationRetrieval.m; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNFileShareIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFileShareIntent.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNFileShareIntent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFileShareIntent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,8 +67,14 @@
 		B82085002307BACF00CF75D4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				15D2BEC6230B200B00251486 /* Operation.h */,
+				15D2BEC4230B200B00251486 /* Operation.m */,
+				15D2BEC5230B200B00251486 /* OperationRetrieval.h */,
+				15D2BEC7230B200B00251486 /* OperationRetrieval.m */,
 				B3E7B5881CC2AC0600A0062D /* RNFileShareIntent.h */,
 				B3E7B5891CC2AC0600A0062D /* RNFileShareIntent.m */,
+				156D45F1230C1CDF00DA668D /* FileHelper.h */,
+				156D45F2230C1CEE00DA668D /* FileHelper.m */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -121,7 +136,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D2BEC9230B200B00251486 /* OperationRetrieval.m in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNFileShareIntent.m in Sources */,
+				15D2BEC8230B200B00251486 /* Operation.m in Sources */,
+				156D45F3230C1CEF00DA668D /* FileHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
