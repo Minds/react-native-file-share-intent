@@ -95,7 +95,7 @@ public class RNFileShareIntentModule extends ReactContextBaseJavaModule implemen
               type.startsWith("video/")) {
         Uri fileUri = (Uri) intent.getParcelableExtra(Intent.EXTRA_STREAM);
         if (fileUri != null) {
-          sendEvent( fileHelper.getFileData(fileUri, currentActivity));
+          sendEvent( fileHelper.getFileData(fileUri, currentActivity, type));
         }
       }
     } else if (Intent.ACTION_SEND_MULTIPLE.equals(action)) {
